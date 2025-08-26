@@ -1,0 +1,2 @@
+8 - Contador de Calorias
+Escreva um programa que permita ao usuário registrar sua ingestão diária de calorias e calcular o total.
