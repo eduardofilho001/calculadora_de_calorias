@@ -2,11 +2,171 @@
 
 
 {% block title %}
-    teste
+    Calculadora de calorias
 {% endblock title %}
 
 
 {% block body %}
-    testado!
+    <h1>Calculadora de calorias</h1>
+
+    <h3>Micronutrientes principais:</h3>
+    <ul>
+        <li>Carboidratos: 4 kcal</li>
+        <li>Proteínas: 4 kcal</li>
+        <li>Gorduras: 9 kcal</li>
+        <li>(Fibra alimentar geralmente não é contabilizada ou tem valor muito baixo, mas alguns sistemas consideram ~2 kcal por grama)</li>
+        <li>Álcool (se houver): 7 kcal por grama</li>
+    </ul>
+
+    <form action="{% url 'resultado' %}" method="post">
+        {% csrf_token %}
+
+            <h3>Alimentos comuns de Angola:</h3>
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th id="nome_do_prato">Alimento</th>
+                    <th>Carboidratos</th>
+                    <th>Proteínas</th>
+                    <th>Gorduras</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Funge de milho</td>
+                        <td>2 g</td>
+                        <td>81 g</td>
+                        <td>1 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Funge de mandioca</td>
+                        <td>79 g</td>
+                        <td>1 g</td>
+                        <td>0 g</td>
+
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Mufete (peixe grelhado + acompanhamentos)</td>
+                        <td>0 g</td>
+                        <td>25 g</td>
+                        <td>10 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Calulu (guisado de peixe)</td>
+                        <td>5 g</td>
+                        <td>15 g</td>
+                        <td>8 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Jimboa (sopa de carne e vegetais)</td>
+                        <td>8 g</td>
+                        <td>10 g</td>
+                        <td>3 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Kizaca (folhas de mandioca)</td>
+                        <td>6 g</td>
+                        <td>2 g</td>
+                        <td>5 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Cachupa (cozido de milho, feijão, legumes)</td>
+                        <td>15 g</td>
+                        <td>8 g</td>
+                        <td>3 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Muamba de frango</td>
+                        <td>3 g</td>
+                        <td>20 g</td>
+                        <td>10 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Ginguba torrada (amendoim)</td>
+                        <td>15 g</td>
+                        <td>25 g</td>
+                        <td>50 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Molho de tomate, ovo e chouriço</td>
+                        <td>5 g</td>
+                        <td>12 g</td>
+                        <td>15 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Makayabu (peixe seco)</td>
+                        <td>0 g</td>
+                        <td>35 g</td>
+                        <td>10 g</td>
+                    </label>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Kissanguá (bebida tradicional)</td>    
+                    </label>
+                    <td>10 g </td>
+                    <td>0 g</td>
+                    <td>0 g</td>
+                </tr>
+        
+                <tr>
+                    <input type="radio" name="nome_do_prato" id="" value="nome_do_prato">
+                    <label for="nome_do_prato">
+                        <td id="nome_do_prato">Mukua (fruto do imbondeiro)</td>
+                        <td>12 g</td>
+                        <td>1 g</td>
+                        <td>0 g</td>
+                    </label>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Calcular calorias</button>
+    </form>
 {% endblock body %}
     
